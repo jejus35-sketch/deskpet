@@ -1,0 +1,34 @@
+{
+  "name": "desk-pet",
+  "version": "1.0.0",
+  "description": "A desktop pet that tidies your Windows Desktop into folders",
+  "main": "main.js",
+  "author": "DeskPet contributors",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.deskpet.app",
+    "productName": "DeskPet",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**",
+      "assets/**"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.png"
+    },
+    "portable": {
+      "artifactName": "DeskPet.exe"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'">
+<title>DeskPet</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <div id="bubble" class="hit hidden" role="status">
+    <p id="bubble-text"></p>
+    <p id="bubble-sub"></p>
+    <div id="bubble-form">
+      <input id="name-input" type="text" maxlength="60" autocomplete="off">
+      <div id="bubble-actions">
+        <button type="button" id="btn-save"></button>
+        <button type="button" id="btn-last"></button>
+      </div>
+    </div>
+  </div>
+  <div id="pet" class="hit sit">
+    <button type="button" id="close">
+      <svg viewBox="0 0 12 12" width="10" height="10"><path d="M2 2 L10 10 M10 2 L2 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div id="sprite"></div>
+  </div>
+  <div id="shadow"></div>
+</div>
+<script src="i18n.js"></script>
+<script src="characters.js"></script>
+<script src="renderer.js"></script>
+</body>
+</html>
